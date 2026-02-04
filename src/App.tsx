@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { PasswordForm } from './components/PasswordForm';
 import { ResultCard } from './components/ResultCard';
-// import { SecurityInfo } from './components/SecurityInfo';
+import { SecurityInfo } from './components/SecurityInfo';
 import { Footer } from './components/Footer';
 import { hashPassword } from './utils/hash';
 import { fetchBreachSuffixes } from './services/breachApi';
@@ -63,7 +63,7 @@ function App() {
         
         <ResultCard result={result} />
         
-        {/* <SecurityInfo /> */}
+        <SecurityInfo />
       </main>
 
       <Footer />
