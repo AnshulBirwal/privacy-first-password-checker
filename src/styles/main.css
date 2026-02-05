@@ -32,21 +32,55 @@ header { text-align: center; }
 h1 { margin: 0; font-size: 2.5rem; }
 .subtitle { color: var(--text-muted); margin-top: 0.5rem; }
 
+/* --- FORM & INPUT STYLES --- */
+
 .input-group {
   display: flex;
   gap: 10px;
   margin-bottom: 0.5rem;
 }
 
-input {
+.input-wrapper {
+  position: relative;
   flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Input Field styling */
+.input-wrapper input {
+  width: 100%;
   padding: 12px;
+  padding-right: 45px; /* make room for the eye icn */
   border: 1px solid #ddd;
   border-radius: var(--radius);
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
-button {
+/* Eye Icon (Show/Hide) Button */
+.toggle-visibility {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.toggle-visibility:hover {
+  color: var(--text-main);
+  background-color: rgba(0,0,0,0.05);
+}
+
+/* Main Submit/Check Button */
+.submit-btn {
   padding: 12px 24px;
   background-color: var(--primary);
   color: white;
@@ -55,9 +89,15 @@ button {
   cursor: pointer;
   font-weight: 600;
   transition: opacity 0.2s;
+  white-space: nowrap;
 }
 
-button:disabled { opacity: 0.6; cursor: not-allowed; }
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- RESULT CARD STYLES --- */
 
 .result-card {
   padding: 1.5rem;
@@ -71,13 +111,31 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
 .result-card.safe { border-left: 5px solid var(--success); }
 .result-card.danger { border-left: 5px solid var(--danger); }
 
+.result-text {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.recommendation {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* --- INFO & ERROR STYLES --- */
+
 .security-info {
   background: #eef2ff;
   padding: 1.5rem;
   border-radius: var(--radius);
   font-size: 0.9rem;
+  line-height: 1.5;
 }
 
+.security-info h3 { margin-top: 0; }
 .security-info ul { padding-left: 1.2rem; margin: 0; }
 .security-info li { margin-bottom: 0.5rem; }
 
@@ -89,12 +147,48 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   text-align: center;
 }
 
-footer {
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+/* --- FOOTER STYLES --- */
+
+.site-footer {
   margin-top: auto;
+  padding: 2rem 1rem;
+  background-color: #e5e7eb;
+  border-top: 1px solid #d1d5db;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-radius: var(--radius) var(--radius) 0 0; /* Optional: rounded top corners */
 }
+
+.footer-content p {
+  margin: 0.5rem 0;
+}
+
+.footer-links {
+  margin: 1rem 0;
+}
+
+.footer-links a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+/* --- ANIMATIONS --- */
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
