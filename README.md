@@ -1,9 +1,12 @@
 # Privacy-First Password Breach Checker
 
-try out on: https://anshulbirwal.github.io/privacy-first-password-checker/
+
 This is a client-side web application designed to verify whether a password has appeared in known data breaches. It performs this check using k-anonymity, ensuring that the password (and even its full cryptographic hash) never leaves the user's browser.
 
 The application is built with React, TypeScript, and Vite, leveraging the native browser Web Crypto API for performance and security.
+
+try out on: https://anshulbirwal.github.io/privacy-first-password-checker/
+
 ## Project Overview
 
 The primary goal of this tool is to allow users to audit their password security without compromising privacy. Unlike traditional login forms, this application does not transmit the user's input to a backend server. All cryptographic operations are performed locally on the client side.
