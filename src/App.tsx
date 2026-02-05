@@ -7,7 +7,7 @@ import { hashPassword } from './utils/hash';
 import { fetchBreachSuffixes } from './services/breachApi';
 import { checkForMatch } from './utils/parseResponse';
 import type { BreachResult, LoadingState } from './types/breach';
-// import './styles/main.css';
+import './styles/main.css';
 
 function App() {
   const [result, setResult] = useState<BreachResult | null>(null);

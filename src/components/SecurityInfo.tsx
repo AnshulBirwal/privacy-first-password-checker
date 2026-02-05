@@ -15,7 +15,9 @@ export const SecurityInfo: React.FC = () => {
           <strong>Zero Knowledge:</strong> The server never sees your password or your full hash.
         </li>
         <li>
-          <strong>Open Source:</strong> Check out the full source code here: 
+          <strong>Open Source:</strong> Check out the full source code here: <a href="https://github.com/AnshulBirwal/privacy-first-password-checker" target="_blank" rel="noreferrer">
+            View Source on GitHub
+          </a>
         </li>
       </ul>
     </div>
